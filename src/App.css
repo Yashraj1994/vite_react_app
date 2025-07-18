@@ -1,0 +1,65 @@
+/* General reset and font */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+}
+
+/* App container with animation */
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  min-height: 100vh;
+
+  /* Page entry animation */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: pageEnter 0.8s ease-out forwards;
+}
+
+/* Page load animation */
+@keyframes pageEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.98);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+    filter: blur(0px);
+  }
+}
+
+/* Button container */
+.btn {
+  margin-bottom: 20px;
+}
+
+/* Button style with hover effect */
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* Animal card layout */
+.animal {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 900px;
+}

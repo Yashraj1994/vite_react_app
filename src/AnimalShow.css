@@ -1,0 +1,45 @@
+/* Animal card container */
+.show {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 12px;
+  background-color: #f4f4f4;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.show:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+/* Animal SVG image */
+.img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+/* Heart image transition */
+.heart {
+  transition: width 0.3s ease;
+}
+
+/* Optional pulse animation when clicked */
+.heart.clicked {
+  animation: pulse 0.3s ease;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
